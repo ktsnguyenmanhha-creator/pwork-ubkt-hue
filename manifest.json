@@ -1,0 +1,25 @@
+{
+  "name": "pWork - Nguyễn Mạnh Hà (UBKT Thành ủy Huế)",
+  "short_name": "pWork UBKT",
+  "description": "Phần mềm Quản lý Công việc Cơ quan Ủy ban Kiểm tra Thành ủy Huế",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF3E3",
+  "theme_color": "#981B1E",
+  "icons": [
+    {
+      "src": "icon-180.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
