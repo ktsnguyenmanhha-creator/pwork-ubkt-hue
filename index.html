@@ -706,74 +706,80 @@
         </div>
 
         <!-- Quick Upload / Customize Link under Brand Header -->
-        <div class="mt-2.5 flex items-center gap-2">
-          <button id="quickUploadPhotoBtn" type="button" class="flex-1 inline-flex items-center justify-center gap-1.5 px-2.5 py-1 rounded-lg bg-white/60 hover:bg-white/90 text-stone-700 border border-stone-300/70 text-[11px] font-medium transition-colors shadow-2xs">
-            <svg class="w-3.5 h-3.5 text-pwork-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="mt-2.5 grid grid-cols-2 gap-1.5">
+          <button id="quickUploadPhotoBtn" type="button" class="inline-flex items-center justify-center gap-1.5 px-2 py-1.5 rounded-lg bg-stone-50 hover:bg-stone-100 text-stone-700 border border-stone-200/90 text-[11px] font-medium transition-colors" title="Đổi ảnh đại diện cá nhân">
+            <svg class="w-3.5 h-3.5 text-pwork-red shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/>
             </svg>
-            <span>Chọn ảnh cá nhân</span>
+            <span class="truncate">Đổi ảnh</span>
           </button>
-          <button id="openBrandModalBtn" type="button" class="px-2 py-1 rounded-lg bg-white/60 hover:bg-white/90 border border-stone-300/70 text-stone-600 text-[11px] font-medium transition-colors shadow-2xs" title="Tuỳ chỉnh tiêu đề & hình ảnh">
-            Tuỳ biến
+          <button id="openBrandModalBtn" type="button" class="inline-flex items-center justify-center gap-1 px-2 py-1.5 rounded-lg bg-stone-50 hover:bg-stone-100 border border-stone-200/90 text-stone-700 text-[11px] font-medium transition-colors" title="Tuỳ chỉnh tên hiển thị & tên cơ quan">
+            <span>✏️</span>
+            <span class="truncate">Đổi tiêu đề</span>
           </button>
         </div>
       </div>
 
-      <!-- Navigation Links -->
-      <nav class="px-3 pt-4 space-y-1.5" aria-label="Menu chính">
-        <button type="button" data-nav="dashboard" class="nav-tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all bg-pwork-activeBg text-pwork-activeText">
-          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
-          </svg>
-          <span>Tổng quan</span>
-        </button>
+      <!-- CỤM 1: PHÂN HỆ NGHIỆP VỤ CHÍNH -->
+      <div class="px-3 pt-4">
+        <div class="text-[10.5px] font-bold uppercase tracking-wider text-stone-400 mb-1.5 px-2">1. Nghiệp vụ chính</div>
+        <nav class="space-y-1" aria-label="Menu chính">
+          <button type="button" data-nav="dashboard" class="nav-tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium transition-all bg-pwork-activeBg text-pwork-activeText">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/>
+            </svg>
+            <span>Tổng quan</span>
+          </button>
 
-        <button type="button" data-nav="board" class="nav-tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-stone-700 hover:bg-white/50 transition-all">
-          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
-          </svg>
-          <span class="flex-1 text-left">Bảng công việc</span>
-          <span id="sidebarBoardCount" class="text-xs px-1.5 py-0.5 rounded-md bg-white/70 text-stone-700 font-semibold">19</span>
-        </button>
+          <button type="button" data-nav="board" class="nav-tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-stone-700 hover:bg-white/50 transition-all">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"/>
+            </svg>
+            <span class="flex-1 text-left">Bảng công việc</span>
+            <span id="sidebarBoardCount" class="text-xs px-1.5 py-0.5 rounded-md bg-white/70 text-stone-700 font-semibold">19</span>
+          </button>
 
-        <button type="button" data-nav="reminders" class="nav-tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-stone-700 hover:bg-white/50 transition-all">
-          <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
-          </svg>
-          <span class="flex-1 text-left">Nhắc việc</span>
-          <span id="sidebarReminderCount" class="text-xs px-1.5 py-0.5 rounded-md bg-white/70 text-stone-700 font-semibold">9</span>
-        </button>
-      </nav>
+          <button type="button" data-nav="reminders" class="nav-tab-btn w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-sm font-medium text-stone-700 hover:bg-white/50 transition-all">
+            <svg class="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/>
+            </svg>
+            <span class="flex-1 text-left">Nhắc việc</span>
+            <span id="sidebarReminderCount" class="text-xs px-1.5 py-0.5 rounded-md bg-white/70 text-stone-700 font-semibold">9</span>
+          </button>
+        </nav>
+      </div>
 
-      <!-- Quick Workspace Tools + iOS 27 Liquid Glass Studio Trigger -->
-      <div class="mt-7 px-4">
-        <div class="text-[11px] font-semibold uppercase tracking-wider text-stone-400 mb-2 px-1">Tiện ích & Giao diện</div>
-        <div class="space-y-1.5">
-          <button id="openLiquidGlassModalBtn" type="button" class="w-full flex items-center justify-between gap-2 px-3 py-2.5 rounded-xl text-xs font-semibold text-stone-900 bg-gradient-to-r from-white/80 via-amber-50/70 to-white/80 border border-white/90 shadow-sm hover:shadow transition-all">
-            <span class="flex items-center gap-2">
-              <span class="w-5 h-5 rounded-lg bg-gradient-to-br from-amber-500 to-pwork-red text-white flex items-center justify-center text-[11px] shadow-2xs">✨</span>
-              <span>Liquid Glass (iOS 27)</span>
+      <!-- CỤM 2: QUẢN TRỊ ĐƠN VỊ & CÀI ĐẶT -->
+      <div class="mt-5 px-3">
+        <div class="text-[10.5px] font-bold uppercase tracking-wider text-stone-400 mb-1.5 px-2">2. Thiết lập & Tiện ích</div>
+        <div class="space-y-1">
+          <button id="openStaffModalBtn" type="button" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-medium text-stone-700 hover:bg-white/60 transition-colors">
+            <svg class="w-4 h-4 text-pwork-red shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+            </svg>
+            <span>Phòng ban & Cán bộ</span>
+          </button>
+
+          <button id="openLiquidGlassModalBtn" type="button" class="w-full flex items-center justify-between gap-2 px-3 py-2 rounded-xl text-xs font-medium text-stone-700 hover:bg-white/60 transition-all">
+            <span class="flex items-center gap-2.5">
+              <span class="w-4 h-4 rounded-md bg-gradient-to-br from-amber-500 to-pwork-red text-white flex items-center justify-center text-[10px] shrink-0">✨</span>
+              <span>Màu sắc & Giao diện</span>
             </span>
             <span id="sidebarLgStateBadge" class="text-[10px] px-1.5 py-0.5 rounded-full bg-emerald-100 text-emerald-800 font-bold">BẬT</span>
           </button>
 
-          <button id="openStaffModalBtn" type="button" class="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-xs font-medium text-stone-600 hover:bg-white/60 transition-colors">
-            <svg class="w-4 h-4 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-            </svg>
-            <span>Cán bộ & Phòng ban</span>
-          </button>
-          <button id="openDataModalBtn" type="button" class="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-xs font-medium text-stone-600 hover:bg-white/60 transition-colors">
-            <svg class="w-4 h-4 text-stone-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <button id="openDataModalBtn" type="button" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-medium text-stone-700 hover:bg-white/60 transition-colors">
+            <svg class="w-4 h-4 text-stone-500 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4"/>
             </svg>
-            <span>Chế độ dữ liệu & Sao lưu</span>
+            <span>Dữ liệu & Sao lưu</span>
           </button>
-          <button id="openInstallGuideModalBtn" type="button" class="w-full flex items-center gap-2.5 px-2.5 py-2 rounded-lg text-xs font-semibold text-pwork-red hover:bg-white/60 transition-colors">
+
+          <button id="openInstallGuideModalBtn" type="button" class="w-full flex items-center gap-2.5 px-3 py-2 rounded-xl text-xs font-semibold text-pwork-red hover:bg-white/60 transition-colors">
             <svg class="w-4 h-4 text-pwork-red shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
             </svg>
-            <span>Hướng dẫn cài đặt & Tải App</span>
+            <span>Cài đặt iPhone & Máy tính</span>
           </button>
         </div>
       </div>
@@ -826,73 +832,95 @@
     <div class="flex-1 px-4 sm:px-6 lg:px-8 pt-6 pb-28 max-w-[1600px] w-full mx-auto relative z-10">
 
       <!-- VIEW 1: TỔNG QUAN (DASHBOARD) -->
-      <section id="view-dashboard" class="space-y-5 animate-fade-in">
-        <div class="flex flex-wrap items-center justify-between gap-3 max-w-5xl mx-auto">
-          <div class="flex flex-wrap items-center gap-3">
-            <h1 class="text-2xl font-bold text-stone-900 tracking-tight mr-1">Tổng quan</h1>
-            <div class="inline-flex p-1 rounded-xl bg-[#EFE6D5] border border-[#E5DAC6]">
-              <button type="button" data-dash-scope="all" class="dash-scope-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-stone-900 shadow-sm transition-all">Tất cả công việc</button>
-              <button type="button" data-dash-scope="received" class="dash-scope-btn px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600 hover:text-stone-900 transition-all">Việc tôi nhận</button>
-              <button type="button" data-dash-scope="assigned" class="dash-scope-btn px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600 hover:text-stone-900 transition-all">Việc tôi giao</button>
+      <section id="view-dashboard" class="space-y-4 animate-fade-in">
+        <!-- THANH ĐIỀU KHIỂN TỔNG QUAN: CHIA 2 TẦNG CHỨC NĂNG RÕ RÀNG -->
+        <div class="max-w-5xl mx-auto space-y-2.5">
+          <!-- Tầng 1: Tiêu đề, Phạm vi công việc & Cụm Thao tác Nhanh -->
+          <div class="flex flex-wrap items-center justify-between gap-3">
+            <!-- Cụm 1A: Tiêu đề & Phạm vi xem -->
+            <div class="flex flex-wrap items-center gap-3">
+              <h1 class="text-2xl font-bold text-stone-900 tracking-tight">Tổng quan</h1>
+              <div class="inline-flex p-1 rounded-xl bg-[#EFE6D5] border border-[#E5DAC6]" title="Chọn phạm vi công việc cần theo dõi">
+                <button type="button" data-dash-scope="all" class="dash-scope-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-stone-900 shadow-sm transition-all">Tất cả công việc</button>
+                <button type="button" data-dash-scope="received" class="dash-scope-btn px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600 hover:text-stone-900 transition-all">Việc tôi nhận</button>
+                <button type="button" data-dash-scope="assigned" class="dash-scope-btn px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600 hover:text-stone-900 transition-all">Việc tôi giao</button>
+              </div>
+            </div>
+
+            <!-- Cụm 1B: Tác vụ Nghiệp vụ chính -->
+            <div class="flex flex-wrap items-center gap-2">
+              <button id="dashQuickCreateTaskBtn" type="button" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-pwork-red hover:bg-pwork-redHover text-white text-xs font-bold shadow-sm transition-colors cursor-pointer" title="Tạo và giao công việc mới (Phím tắt: N)">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M12 4v16m8-8H4"/>
+                </svg>
+                <span>Giao việc mới</span>
+              </button>
+
+              <button id="copyZaloReportBtn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold shadow-sm transition-colors cursor-pointer" title="Sao chép nhanh Báo cáo Giao ban định dạng chuẩn để dán vào Zalo hoặc Word">
+                <span>📋</span>
+                <span>Copy Báo cáo Giao ban</span>
+              </button>
             </div>
           </div>
 
-          <div class="flex flex-wrap items-center gap-2">
-            <button id="dashOpenIphoneModeBtn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-stone-900 hover:bg-stone-800 text-amber-300 text-xs font-semibold shadow-sm transition-colors cursor-pointer" title="Mở chế độ giao diện iPhone hoặc cài App lên màn hình chính">
-              <span>📲</span>
-              <span>Chế độ iPhone & Cài App</span>
-            </button>
+          <!-- Tầng 2: Khung Lọc Dữ liệu & Tuỳ biến Giao diện (Chia 2 cụm trái - phải tinh gọn) -->
+          <div class="bg-white/85 backdrop-blur-md rounded-2xl px-3.5 py-2.5 border border-[#EBE3D5] shadow-2xs flex flex-wrap items-center justify-between gap-3">
+            <!-- Cụm 2A: Lọc theo Phòng ban, Cán bộ & Kỳ thời gian -->
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="text-[11px] font-bold uppercase tracking-wider text-stone-500 flex items-center gap-1 mr-0.5">
+                <span>🔍 Lọc:</span>
+              </span>
 
-            <button id="dashDirectDownloadBtn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-emerald-700 hover:bg-emerald-800 text-white text-xs font-semibold shadow-sm transition-colors cursor-pointer" title="Tải file phần mềm độc lập (.html) kèm dữ liệu hiện tại về máy">
-              <span>📥</span>
-              <span>Tải phần mềm (.html)</span>
-            </button>
-
-            <button id="copyZaloReportBtn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-amber-600 hover:bg-amber-700 text-white text-xs font-semibold shadow-sm transition-colors cursor-pointer" title="Sao chép nhanh Báo cáo Giao ban định dạng chuẩn để dán vào Zalo hoặc Word">
-              <span>📋</span>
-              <span>Copy Báo cáo Giao ban</span>
-            </button>
-
-            <button id="dashQuickCreateTaskBtn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-pwork-red hover:bg-pwork-redHover text-white text-xs font-semibold shadow-sm transition-colors" title="Tạo công việc mới (Phím tắt: N)">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 4v16m8-8H4"/>
-              </svg>
-              <span>Giao việc mới</span>
-            </button>
-
-            <select id="deviceModeSelect" aria-label="Chế độ hiển thị theo thiết bị" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-semibold rounded-xl px-2.5 py-2 focus:outline-none focus:ring-2 focus:ring-pwork-red/30" title="Tối ưu bố cục cho Điện thoại, Laptop hoặc Máy tính để bàn">
-              <option value="auto">📱💻🖥️ Tự động theo màn hình</option>
-              <option value="mobile">📱 Bố cục Điện thoại (Gọn + Dock)</option>
-              <option value="laptop">💻 Bố cục Laptop (Thu gọn lề)</option>
-              <option value="desktop">🖥️ Bố cục Máy tính bàn (Rộng)</option>
-            </select>
-
-            <button id="topBarLiquidGlassBtn" type="button" class="inline-flex items-center gap-1.5 px-3 py-2 rounded-xl bg-white/75 hover:bg-white text-stone-800 border border-white/90 text-xs font-semibold shadow-sm transition-all" title="Mở bảng tuỳ chỉnh hiệu ứng Liquid Glass iOS 27">
-              <span>✨</span>
-              <span class="hidden sm:inline">Tuỳ chỉnh Liquid Glass</span>
-            </button>
-
-            <div class="inline-flex items-center gap-1.5">
-              <select id="dashDeptSelect" aria-label="Lọc theo phòng ban" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3.5 py-2 min-w-[145px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30">
+              <select id="dashDeptSelect" aria-label="Lọc theo phòng ban" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3 py-1.5 min-w-[140px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30">
                 <option value="all">Tất cả phòng</option>
               </select>
-              <select id="dashStaffSelect" aria-label="Lọc theo cán bộ thuộc phòng" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3 py-2 min-w-[145px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30">
+
+              <select id="dashStaffSelect" aria-label="Lọc theo cán bộ thuộc phòng" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3 py-1.5 min-w-[140px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30">
                 <option value="all">Tất cả cán bộ</option>
               </select>
-              <button id="quickDeptStaffDashBtn" type="button" class="p-2 rounded-xl bg-white hover:bg-stone-50 text-stone-700 border border-stone-300/90 text-xs font-semibold transition-colors shadow-2xs" title="Tuỳ biến Tên phòng & Cán bộ thuộc phòng">
-                <svg class="w-4 h-4 text-pwork-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+
+              <button id="quickDeptStaffDashBtn" type="button" class="px-2.5 py-1.5 rounded-xl bg-stone-50 hover:bg-stone-100 text-stone-700 border border-stone-300/90 text-xs font-semibold inline-flex items-center gap-1 transition-colors" title="Thêm/Sửa Phòng ban & Cán bộ">
+                <svg class="w-3.5 h-3.5 text-pwork-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/>
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
                 </svg>
+                <span class="hidden sm:inline">Phòng/CB</span>
               </button>
+
+              <span class="hidden sm:inline-block h-4 w-px bg-stone-300/80 mx-0.5"></span>
+
+              <select id="dashTimeSelect" aria-label="Lọc theo thời gian" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3 py-1.5 min-w-[115px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30" title="Chọn kỳ thống kê công việc">
+                <option value="today">📅 Hôm nay</option>
+                <option value="week" selected>📅 Tuần này</option>
+                <option value="month">📅 Tháng này</option>
+                <option value="all">📅 Tất cả</option>
+              </select>
             </div>
 
-            <select id="dashTimeSelect" aria-label="Lọc theo thời gian" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3.5 py-2 min-w-[125px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30">
-              <option value="today">Hôm nay</option>
-              <option value="week" selected>Tuần này</option>
-              <option value="month">Tháng này</option>
-              <option value="all">Tất cả thời gian</option>
-            </select>
+            <!-- Cụm 2B: Tuỳ biến Hiển thị & Cài đặt Thiết bị -->
+            <div class="flex flex-wrap items-center gap-1.5">
+              <select id="deviceModeSelect" aria-label="Chế độ hiển thị theo thiết bị" class="bg-white border border-stone-300/90 text-stone-700 text-xs font-medium rounded-xl px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-pwork-red/30" title="Chuyển nhanh chế độ khung hình Điện thoại, Laptop hoặc Máy tính bàn">
+                <option value="auto">🖥️ Màn hình: Tự động</option>
+                <option value="mobile">📱 Chế độ Điện thoại</option>
+                <option value="laptop">💻 Chế độ Laptop</option>
+                <option value="desktop">🖥️ Chế độ Máy bàn</option>
+              </select>
+
+              <button id="topBarLiquidGlassBtn" type="button" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-white hover:bg-stone-50 text-stone-700 border border-stone-300/90 text-xs font-medium transition-all cursor-pointer" title="Đổi màu nền & hiệu ứng kính">
+                <span>✨</span>
+                <span>Màu nền</span>
+              </button>
+
+              <button id="dashOpenIphoneModeBtn" type="button" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-stone-900 hover:bg-stone-800 text-amber-300 text-xs font-semibold transition-colors cursor-pointer" title="Mở mã QR cài App lên iPhone hoặc xem hướng dẫn">
+                <span>📲</span>
+                <span>App iPhone</span>
+              </button>
+
+              <button id="dashDirectDownloadBtn" type="button" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-800 border border-emerald-300 text-xs font-semibold transition-colors cursor-pointer" title="Lưu phần mềm kèm dữ liệu hiện tại thành 1 file .html">
+                <span>📥</span>
+                <span class="hidden lg:inline">Lưu file</span>
+              </button>
+            </div>
           </div>
         </div>
 
@@ -1064,10 +1092,12 @@
       </section>
 
       <!-- VIEW 2: BẢNG CÔNG VIỆC (KANBAN BOARD) -->
-      <section id="view-board" class="hidden space-y-4 animate-fade-in">
-        <div class="flex flex-col xl:flex-row xl:items-center justify-between gap-3">
+      <section id="view-board" class="hidden space-y-3.5 animate-fade-in">
+        <!-- TẦNG 1: TIÊU ĐỀ, PHẠM VI & CỤM TÁC VỤ CHÍNH -->
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <!-- Cụm 1A: Tiêu đề & Phạm vi công việc -->
           <div class="flex flex-wrap items-center gap-2.5">
-            <h1 class="text-2xl font-bold text-stone-900 tracking-tight mr-1">Bảng công việc</h1>
+            <h1 class="text-2xl font-bold text-stone-900 tracking-tight">Bảng công việc</h1>
 
             <div class="inline-flex p-1 rounded-xl bg-[#EFE6D5] border border-[#E5DAC6]">
               <button type="button" data-board-scope="all" class="board-scope-btn px-3 py-1.5 rounded-lg text-xs font-semibold bg-white text-stone-900 shadow-sm transition-all">Tất cả công việc</button>
@@ -1075,99 +1105,115 @@
               <button type="button" data-board-scope="assigned" class="board-scope-btn px-3 py-1.5 rounded-lg text-xs font-medium text-stone-600 hover:text-stone-900 transition-all">Việc tôi giao</button>
             </div>
 
-            <div class="inline-flex items-center gap-1.5">
-              <select id="boardDeptSelect" aria-label="Lọc phòng ban trên bảng" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3.5 py-2 min-w-[145px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30">
-                <option value="all">Tất cả phòng</option>
-              </select>
-              <select id="boardStaffSelect" aria-label="Lọc cán bộ thuộc phòng trên bảng" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3 py-2 min-w-[145px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30">
-                <option value="all">Tất cả cán bộ</option>
-              </select>
-              <button id="quickDeptStaffBoardBtn" type="button" class="p-2 rounded-xl bg-white hover:bg-stone-50 text-stone-700 border border-stone-300/90 text-xs font-semibold transition-colors shadow-2xs" title="Tuỳ biến Tên phòng & Cán bộ thuộc phòng">
-                <svg class="w-4 h-4 text-pwork-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
-                </svg>
-              </button>
-            </div>
-
-            <div class="relative min-w-[210px]">
-              <svg class="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
-              </svg>
-              <input id="boardSearchInput" type="text" placeholder="Tìm theo tên, mã việc, cán bộ..." class="w-full bg-white border border-stone-300/90 text-stone-800 text-xs rounded-xl pl-9 pr-3 py-2 focus:outline-none focus:ring-2 focus:ring-pwork-red/30 placeholder:text-stone-400" />
-            </div>
-
-            <select id="boardTimeSelect" aria-label="Lọc thời gian trên bảng" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3 py-2 min-w-[110px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30">
-              <option value="today">Hôm nay</option>
-              <option value="week">Tuần này</option>
-              <option value="month" selected>Tháng này</option>
-              <option value="all">Tất cả</option>
-            </select>
-
-            <select id="boardSortSelect" aria-label="Sắp xếp công việc" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3 py-2 focus:outline-none focus:ring-2 focus:ring-pwork-red/30" title="Thứ tự sắp xếp công việc">
-              <option value="default">↕ Sắp xếp: Mặc định</option>
-              <option value="due_asc">⏳ Hạn gần nhất trước</option>
-              <option value="priority_desc">🔥 Ưu tiên Khẩn trước</option>
-              <option value="id_desc">🆕 Mới tạo nhất</option>
-            </select>
-
-            <button id="boardOverdueOnlyBtn" type="button" class="px-3 py-2 rounded-xl bg-white border border-stone-300/90 text-stone-600 hover:text-red-700 text-xs font-medium transition-colors" title="Chỉ lọc các công việc đang quá hạn">
-              ⚠️ Quá hạn
-            </button>
-
-            <button id="boardUrgentOnlyBtn" type="button" class="px-3 py-2 rounded-xl bg-white border border-stone-300/90 text-stone-600 hover:text-red-700 text-xs font-medium transition-colors" title="Chỉ lọc các công việc Khẩn / Ưu tiên cao">
-              🔥 Khẩn
-            </button>
-
-            <button id="resetBoardFiltersBtn" type="button" class="hidden px-2.5 py-2 rounded-xl bg-stone-800 text-white text-[11px] font-semibold hover:bg-stone-900 transition-colors" title="Xoá toàn bộ bộ lọc đang áp dụng">
-              ✕ Xoá lọc
-            </button>
+            <span id="boardTotalTasksLabel" class="px-2.5 py-1 rounded-lg bg-stone-200/70 text-stone-700 text-xs font-bold">19 việc</span>
           </div>
 
+          <!-- Cụm 1B: Tạo việc, Excel & Chuyển kiểu xem -->
           <div class="flex flex-wrap items-center gap-2">
-            <span id="boardTotalTasksLabel" class="text-xs font-medium text-stone-500 mr-1">19 việc</span>
-
-            <button id="toggleCancelledColBtn" type="button" class="p-2 rounded-xl bg-white border border-stone-300/90 text-stone-600 hover:bg-stone-50 transition-colors" title="Ẩn/Hiện cột Đã huỷ & Sắp xếp">
+            <button id="createTaskBtn" type="button" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-pwork-red hover:bg-pwork-redHover text-white text-xs font-bold shadow-sm transition-colors cursor-pointer">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.4" d="M12 4v16m8-8H4"/>
               </svg>
+              <span>Tạo việc mới</span>
             </button>
 
-            <button id="createTaskBtn" type="button" class="inline-flex items-center gap-1.5 px-4 py-2 rounded-xl bg-pwork-red hover:bg-pwork-redHover text-white text-xs font-semibold shadow-sm transition-colors">
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 4v16m8-8H4"/>
-              </svg>
-              <span>Tạo việc</span>
-            </button>
+            <div class="inline-flex items-center rounded-xl bg-white border border-stone-300/90 p-0.5 shadow-2xs">
+              <button id="exportExcelBtn" type="button" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 text-xs font-semibold transition-colors" title="Xuất danh sách công việc ra file Excel (.csv)">
+                <svg class="w-3.5 h-3.5 text-emerald-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
+                </svg>
+                <span>Xuất Excel</span>
+              </button>
+              <span class="h-4 w-px bg-stone-200"></span>
+              <label for="importExcelInput" class="inline-flex items-center gap-1 px-2.5 py-1.5 rounded-lg hover:bg-stone-100 text-stone-700 text-xs font-semibold transition-colors cursor-pointer" title="Nhập danh sách công việc từ file Excel (.csv)">
+                <svg class="w-3.5 h-3.5 text-amber-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
+                </svg>
+                <span>Nhập Excel</span>
+                <input id="importExcelInput" type="file" accept=".csv,.tsv,.txt" class="hidden" />
+              </label>
+            </div>
 
-            <button id="exportExcelBtn" type="button" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white hover:bg-stone-50 text-stone-800 border border-stone-300/90 text-xs font-semibold transition-colors">
-              <svg class="w-4 h-4 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/>
-              </svg>
-              <span>Xuất Excel</span>
-            </button>
-
-            <label for="importExcelInput" class="inline-flex items-center gap-1.5 px-3.5 py-2 rounded-xl bg-white hover:bg-stone-50 text-stone-800 border border-stone-300/90 text-xs font-semibold transition-colors cursor-pointer">
-              <svg class="w-4 h-4 text-stone-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-8l-4-4m0 0L8 8m4-4v12"/>
-              </svg>
-              <span>Nhập từ Excel</span>
-              <input id="importExcelInput" type="file" accept=".csv,.tsv,.txt" class="hidden" />
-            </label>
+            <div class="inline-flex p-0.5 rounded-xl bg-[#EFE6D5] border border-[#E5DAC6] shrink-0">
+              <button id="boardViewKanbanBtn" type="button" class="px-2.5 py-1.5 rounded-lg text-xs font-semibold bg-white text-stone-900 shadow-2xs transition-all">
+                🗂️ Thẻ Kanban
+              </button>
+              <button id="boardViewTableBtn" type="button" class="px-2.5 py-1.5 rounded-lg text-xs font-medium text-stone-600 hover:text-stone-900 transition-all">
+                📋 Danh sách
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- Mobile & Quick Stage Filter Bar + View Mode Switcher (Kanban vs Table) -->
-        <div class="flex flex-wrap items-center justify-between gap-2 pb-1">
-          <div id="boardStagePillsBar" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 max-w-full"></div>
+        <!-- TẦNG 2: KHUNG TRA CỨU, LỌC ĐƠN VỊ & SẮP XẾP THÔNG MINH -->
+        <div class="bg-white/85 backdrop-blur-md rounded-2xl px-3.5 py-2.5 border border-[#EBE3D5] shadow-2xs flex flex-wrap items-center justify-between gap-2.5">
+          <!-- Cụm 2A: Tìm kiếm & Lọc theo Phòng / Cán bộ -->
+          <div class="flex flex-wrap items-center gap-2 flex-1 min-w-[260px]">
+            <div class="relative w-full sm:w-56">
+              <svg class="w-4 h-4 text-stone-400 absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+              </svg>
+              <input id="boardSearchInput" type="text" placeholder="Tìm tên việc, #mã, cán bộ..." class="w-full bg-white border border-stone-300/90 text-stone-800 text-xs rounded-xl pl-8 pr-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-pwork-red/30 placeholder:text-stone-400" />
+            </div>
 
-          <div class="inline-flex p-0.5 rounded-xl bg-[#EFE6D5] border border-[#E5DAC6] shrink-0 ml-auto">
-            <button id="boardViewKanbanBtn" type="button" class="px-2.5 py-1 rounded-lg text-[11px] font-semibold bg-white text-stone-900 shadow-2xs transition-all">
-              🗂️ Thẻ Kanban
-            </button>
-            <button id="boardViewTableBtn" type="button" class="px-2.5 py-1 rounded-lg text-[11px] font-medium text-stone-600 hover:text-stone-900 transition-all">
-              📋 Bảng danh sách
+            <span class="hidden md:inline-block h-4 w-px bg-stone-300/80"></span>
+
+            <select id="boardDeptSelect" aria-label="Lọc phòng ban trên bảng" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3 py-1.5 min-w-[135px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30">
+              <option value="all">Tất cả phòng</option>
+            </select>
+
+            <select id="boardStaffSelect" aria-label="Lọc cán bộ thuộc phòng trên bảng" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-3 py-1.5 min-w-[135px] focus:outline-none focus:ring-2 focus:ring-pwork-red/30">
+              <option value="all">Tất cả cán bộ</option>
+            </select>
+
+            <button id="quickDeptStaffBoardBtn" type="button" class="p-1.5 rounded-xl bg-stone-50 hover:bg-stone-100 text-stone-700 border border-stone-300/90 text-xs font-semibold transition-colors" title="Quản lý danh sách Phòng ban & Cán bộ">
+              <svg class="w-4 h-4 text-pwork-red" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/>
+              </svg>
             </button>
           </div>
+
+          <!-- Cụm 2B: Kỳ thời gian, Sắp xếp & Lọc nhanh Quá hạn / Khẩn -->
+          <div class="flex flex-wrap items-center gap-1.5">
+            <select id="boardTimeSelect" aria-label="Lọc thời gian trên bảng" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-pwork-red/30" title="Kỳ thời gian">
+              <option value="today">📅 Hôm nay</option>
+              <option value="week">📅 Tuần này</option>
+              <option value="month" selected>📅 Tháng này</option>
+              <option value="all">📅 Tất cả</option>
+            </select>
+
+            <select id="boardSortSelect" aria-label="Sắp xếp công việc" class="bg-white border border-stone-300/90 text-stone-800 text-xs font-medium rounded-xl px-2.5 py-1.5 focus:outline-none focus:ring-2 focus:ring-pwork-red/30" title="Thứ tự sắp xếp công việc">
+              <option value="default">↕ Mặc định</option>
+              <option value="due_asc">⏳ Hạn gần nhất</option>
+              <option value="priority_desc">🔥 Ưu tiên Khẩn</option>
+              <option value="id_desc">🆕 Mới tạo nhất</option>
+            </select>
+
+            <button id="boardOverdueOnlyBtn" type="button" class="px-2.5 py-1.5 rounded-xl bg-white border border-stone-300/90 text-stone-600 hover:text-red-700 text-xs font-medium transition-colors" title="Chỉ hiện các việc đang quá hạn">
+              ⚠️ Quá hạn
+            </button>
+
+            <button id="boardUrgentOnlyBtn" type="button" class="px-2.5 py-1.5 rounded-xl bg-white border border-stone-300/90 text-stone-600 hover:text-red-700 text-xs font-medium transition-colors" title="Chỉ hiện các việc Khẩn / Ưu tiên cao">
+              🔥 Khẩn
+            </button>
+
+            <button id="toggleCancelledColBtn" type="button" class="px-2.5 py-1.5 rounded-xl bg-white border border-stone-300/90 text-stone-600 hover:bg-stone-50 text-xs font-medium inline-flex items-center gap-1 transition-colors" title="Ẩn hoặc hiện cột công việc Đã huỷ">
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+              <span class="hidden sm:inline">Cột Đã huỷ</span>
+            </button>
+
+            <button id="resetBoardFiltersBtn" type="button" class="hidden px-2.5 py-1.5 rounded-xl bg-stone-800 text-white text-xs font-semibold hover:bg-stone-900 transition-colors" title="Xoá toàn bộ bộ lọc đang áp dụng">
+              ✕ Xoá lọc
+            </button>
+          </div>
+        </div>
+
+        <!-- TẦNG 3: THANH CHỌN NHANH THEO TRẠNG THÁIXỬ LÝ -->
+        <div class="flex items-center justify-between gap-2">
+          <div id="boardStagePillsBar" class="flex items-center gap-1.5 overflow-x-auto no-scrollbar py-0.5 max-w-full"></div>
         </div>
 
         <div id="kanbanBoardGrid" class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3.5 items-start"></div>
@@ -1684,8 +1730,8 @@
         <div class="flex items-center gap-2.5">
           <span class="w-7 h-7 rounded-xl bg-gradient-to-br from-amber-500 to-pwork-red text-white flex items-center justify-center text-sm shadow-sm">✨</span>
           <div>
-            <h2 class="text-base font-bold text-stone-900 leading-tight">Tuỳ chỉnh Hiệu ứng Liquid Glass (iOS 27)</h2>
-            <p class="text-[11px] text-stone-500">Hiệu ứng kính lỏng quang học, khúc xạ 3D và dải lụa nền chuẩn iPhone iOS 27</p>
+            <h2 class="text-base font-bold text-stone-900 leading-tight">Tuỳ chỉnh Màu sắc & Giao diện</h2>
+            <p class="text-[11px] text-stone-500">Chọn tông màu nền và độ rõ nét phù hợp với mắt nhìn của bạn</p>
           </div>
         </div>
         <button id="closeLiquidGlassModalBtn" type="button" class="p-1.5 rounded-lg text-stone-400 hover:text-stone-700 hover:bg-stone-200/60">
@@ -1699,8 +1745,8 @@
         <!-- Enable / Disable Master Switch -->
         <div class="p-3.5 rounded-2xl bg-cream-100/80 border border-cream-300 flex items-center justify-between gap-4">
           <div>
-            <div class="font-bold text-stone-900 text-sm">Kích hoạt giao diện Liquid Glass iOS 27</div>
-            <div class="text-[11px] text-stone-500 mt-0.5">Làm trong suốt các thẻ công việc, khúc xạ nền lụa và tạo viền sáng nổi 3D</div>
+            <div class="font-bold text-stone-900 text-sm">Hiệu ứng Nền Kính Nổi (Liquid Glass)</div>
+            <div class="text-[11px] text-stone-500 mt-0.5">Tắt công tắc này nếu bạn thích giao diện nền phẳng truyền thống</div>
           </div>
           <label class="relative inline-flex items-center cursor-pointer shrink-0">
             <input id="lgEnabledCheckbox" type="checkbox" checked class="sr-only peer" />
@@ -1708,16 +1754,16 @@
           </label>
         </div>
 
-        <!-- iOS 27 Wallpaper Theme Presets -->
+        <!-- CỤM 1: CHỌN TÔNG MÀU CHỦ ĐẠO -->
         <div>
           <div class="flex items-center justify-between mb-2">
-            <label class="font-bold text-stone-800 uppercase tracking-wider text-[11px]">Chủ đề Nền Lụa Quang học (iOS 27 Wallpaper)</label>
+            <label class="font-bold text-stone-800 uppercase tracking-wider text-[11px]">1. Chọn Tông Màu Chủ Đạo (Chạm để đổi ngay)</label>
             <div class="flex items-center gap-2">
               <button id="lgUploadCustomWallBtn" type="button" class="text-[11px] font-semibold text-pwork-red hover:underline">
-                + Tải ảnh nền riêng
+                + Chọn ảnh nền từ máy
               </button>
               <button id="lgClearCustomWallBtn" type="button" class="hidden text-[11px] text-stone-500 hover:text-red-600 underline">
-                Xoá ảnh nền riêng
+                Xoá ảnh riêng
               </button>
             </div>
           </div>
@@ -1725,80 +1771,82 @@
           <div class="grid grid-cols-2 sm:grid-cols-3 gap-2.5">
             <button type="button" data-lg-theme="silk_champagne" class="lg-theme-btn p-2.5 rounded-2xl border-2 border-pwork-red bg-white text-left transition-all">
               <div class="h-10 rounded-xl mb-1.5 bg-gradient-to-br from-[#8C6239] via-[#E8D5B5] to-[#594338] shadow-inner border border-white/60"></div>
-              <div class="font-bold text-stone-900 text-[11px]">Silk Champagne</div>
-              <div class="text-[10px] text-stone-500">Chuẩn iOS 27 Gốc (Ảnh mẫu)</div>
+              <div class="font-bold text-stone-900 text-[11px]">Vàng Lụa Hoàng Kim</div>
+              <div class="text-[10px] text-stone-500">Ấm áp, sang trọng (Mặc định)</div>
             </button>
 
             <button type="button" data-lg-theme="pearl_hue" class="lg-theme-btn p-2.5 rounded-2xl border border-stone-200 hover:border-stone-400 bg-white text-left transition-all">
               <div class="h-10 rounded-xl mb-1.5 bg-gradient-to-br from-[#F7E8D0] via-[#FFFDF9] to-[#D4A373] shadow-inner border border-white/60"></div>
-              <div class="font-bold text-stone-900 text-[11px]">Pearl Heritage</div>
-              <div class="text-[10px] text-stone-500">Ngọc trai & Hoàng kim Huế</div>
+              <div class="font-bold text-stone-900 text-[11px]">Ngọc Trai Cố Đô</div>
+              <div class="text-[10px] text-stone-500">Sáng rõ, dịu mắt</div>
             </button>
 
             <button type="button" data-lg-theme="azure_crystal" class="lg-theme-btn p-2.5 rounded-2xl border border-stone-200 hover:border-stone-400 bg-white text-left transition-all">
               <div class="h-10 rounded-xl mb-1.5 bg-gradient-to-br from-[#1E3A8A] via-[#60A5FA] to-[#DBEAFE] shadow-inner border border-white/60"></div>
-              <div class="font-bold text-stone-900 text-[11px]">Azure Weather</div>
-              <div class="text-[10px] text-stone-500">Xanh pha lê iOS Widget</div>
+              <div class="font-bold text-stone-900 text-[11px]">Xanh Pha Lê</div>
+              <div class="text-[10px] text-stone-500">Tươi mát, hiện đại</div>
             </button>
 
             <button type="button" data-lg-theme="emerald_lotus" class="lg-theme-btn p-2.5 rounded-2xl border border-stone-200 hover:border-stone-400 bg-white text-left transition-all">
               <div class="h-10 rounded-xl mb-1.5 bg-gradient-to-br from-[#065F46] via-[#A7F3D0] to-[#FDE68A] shadow-inner border border-white/60"></div>
-              <div class="font-bold text-stone-900 text-[11px]">Emerald Lotus</div>
-              <div class="text-[10px] text-stone-500">Ngọc bích & Sen vàng</div>
+              <div class="font-bold text-stone-900 text-[11px]">Xanh Ngọc Sen Vàng</div>
+              <div class="text-[10px] text-stone-500">Nhẹ nhàng, thư thái</div>
             </button>
 
             <button type="button" data-lg-theme="titanium_dark" class="lg-theme-btn p-2.5 rounded-2xl border border-stone-200 hover:border-stone-400 bg-white text-left transition-all">
               <div class="h-10 rounded-xl mb-1.5 bg-gradient-to-br from-[#0F172A] via-[#334155] to-[#785A3C] shadow-inner border border-white/60"></div>
-              <div class="font-bold text-stone-900 text-[11px]">Titanium Dark</div>
-              <div class="text-[10px] text-stone-500">Kính Đêm iOS 27 Pro</div>
+              <div class="font-bold text-stone-900 text-[11px]">Chế Độ Ban Đêm</div>
+              <div class="text-[10px] text-stone-500">Nền tối chống mỏi mắt</div>
             </button>
 
             <button type="button" data-lg-theme="classic_cream" class="lg-theme-btn p-2.5 rounded-2xl border border-stone-200 hover:border-stone-400 bg-white text-left transition-all">
               <div class="h-10 rounded-xl mb-1.5 bg-[#FAF3E3] shadow-inner border border-stone-200"></div>
-              <div class="font-bold text-stone-900 text-[11px]">Classic Cream</div>
-              <div class="text-[10px] text-stone-500">Nền kem phẳng truyền thống</div>
+              <div class="font-bold text-stone-900 text-[11px]">Nền Kem Truyền Thống</div>
+              <div class="text-[10px] text-stone-500">Đơn giản, rõ chữ nhất</div>
             </button>
           </div>
         </div>
 
-        <!-- Optical Sliders -->
-        <div class="space-y-3.5 pt-2 border-t border-stone-200/80">
-          <div class="font-bold text-stone-800 uppercase tracking-wider text-[11px]">Thông số Thấu kính Quang học (Real-time)</div>
+        <!-- CỤM 2: CHỈNH ĐỘ RÕ NÉT & BO GÓC (GỌN GÀNG 2 CỘT) -->
+        <div class="space-y-3 pt-3 border-t border-stone-200/80">
+          <div class="font-bold text-stone-800 uppercase tracking-wider text-[11px]">2. Tuỳ chỉnh Độ Rõ Nét & Khung Thẻ</div>
 
-          <!-- Opacity Slider -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <label for="lgOpacityInput" class="font-medium text-stone-700">Độ trong suốt mặt kính (Glass Translucency)</label>
-              <span id="lgOpacityValLabel" class="font-bold text-pwork-red">56%</span>
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3.5 bg-stone-50/80 p-3.5 rounded-2xl border border-stone-200/70">
+            <!-- Opacity Slider -->
+            <div>
+              <div class="flex justify-between mb-1">
+                <label for="lgOpacityInput" class="font-medium text-stone-700">Độ đậm nền thẻ</label>
+                <span id="lgOpacityValLabel" class="font-bold text-pwork-red">56%</span>
+              </div>
+              <input id="lgOpacityInput" type="range" min="20" max="92" value="56" class="w-full accent-pwork-red cursor-pointer" />
             </div>
-            <input id="lgOpacityInput" type="range" min="20" max="92" value="56" class="w-full accent-pwork-red cursor-pointer" />
-          </div>
 
-          <!-- Blur Slider -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <label for="lgBlurInput" class="font-medium text-stone-700">Độ tán sắc & Làm mờ nền (Backdrop Blur)</label>
-              <span id="lgBlurValLabel" class="font-bold text-pwork-red">28px</span>
+            <!-- Blur Slider -->
+            <div>
+              <div class="flex justify-between mb-1">
+                <label for="lgBlurInput" class="font-medium text-stone-700">Độ làm mờ nền sau</label>
+                <span id="lgBlurValLabel" class="font-bold text-pwork-red">28px</span>
+              </div>
+              <input id="lgBlurInput" type="range" min="4" max="48" value="28" class="w-full accent-pwork-red cursor-pointer" />
             </div>
-            <input id="lgBlurInput" type="range" min="4" max="48" value="28" class="w-full accent-pwork-red cursor-pointer" />
-          </div>
 
-          <!-- Specular Rim Slider -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <label for="lgSpecularInput" class="font-medium text-stone-700">Cường độ viền sáng khúc xạ 3D (Specular Rim)</label>
-              <span id="lgSpecularValLabel" class="font-bold text-pwork-red">88%</span>
+            <!-- Specular Rim Slider -->
+            <div>
+              <div class="flex justify-between mb-1">
+                <label for="lgSpecularInput" class="font-medium text-stone-700">Độ sáng đường viền</label>
+                <span id="lgSpecularValLabel" class="font-bold text-pwork-red">88%</span>
+              </div>
+              <input id="lgSpecularInput" type="range" min="15" max="100" value="88" class="w-full accent-pwork-red cursor-pointer" />
             </div>
-            <input id="lgSpecularInput" type="range" min="15" max="100" value="88" class="w-full accent-pwork-red cursor-pointer" />
-          </div>
 
-          <!-- Squircle Corner Radius Slider -->
-          <div>
-            <div class="flex justify-between mb-1">
-              <label for="lgRadiusInput" class="font-medium text-stone-700">Độ bo góc thẻ chuẩn iOS 27 (Squircle Radius)</label>
-              <span id="lgRadiusValLabel" class="font-bold text-pwork-red">22px</span>
+            <!-- Squircle Corner Radius Slider -->
+            <div>
+              <div class="flex justify-between mb-1">
+                <label for="lgRadiusInput" class="font-medium text-stone-700">Độ bo tròn góc thẻ</label>
+                <span id="lgRadiusValLabel" class="font-bold text-pwork-red">22px</span>
+              </div>
+              <input id="lgRadiusInput" type="range" min="12" max="32" value="22" class="w-full accent-pwork-red cursor-pointer" />
             </div>
-            <input id="lgRadiusInput" type="range" min="12" max="32" value="22" class="w-full accent-pwork-red cursor-pointer" />
           </div>
         </div>
 
